@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+/* HEADER */
+.header-container{
+  box-sizing: border-box;
+  width: 100%;
+  height: 36.2%;
+  padding: 0 22px;
+  background-image: url('./app-images/pattern-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-title-container{
+  width: 100%;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.header-title-container p{
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+  color: #F7FEFF;
+  margin: 27px 0 0 0;
+}
+.ip-input-container{
+  width: 100%;
+  height: 58px;
+  margin-top: 30px;
+  display: flex;
+  border-radius: 13px;
+  overflow: hidden;
+}
+.ip-input-container input{
+  width: 82.2%;
+  height: 100%;
+  padding: 0 0 0 23px;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 21.33px;
+  border: none;
+  background-color: #FFFFFF;
+}
+.ip-input-container input::placeholder{
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 21.33px;
+  font-style: italic;
+  color: #CBCBCB;
+}
+.search-button-container{
+  width: 17.8%;
+  height: 100%;
+  background-color: #000000;
+  cursor: pointer; 
+}
+.search-button-container figure{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* MAP STYLE */
+.leaflet-container {
+  width: 100%;
+  height: 63.8%;
+  z-index: 1;
+}
+.leaflet-div-icon{
+  background: inherit;
+  border: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (min-width:720px) {
+  .header-container{
+    padding: 0 85px;
   }
-  to {
-    transform: rotate(360deg);
+  .header-title-container p{
+    font-size: 3.2rem;
+  }
+  .ip-input-container input{
+    font-size: 2.6rem;
+    padding: 0 0 0 50px;
+  }
+  .ip-input-container input::placeholder{
+    font-size: 2.6rem;
+  }
+}
+@media screen and (min-width:1200px) {
+  .header-container{
+    padding: 0 442px;
+  }
+  .header-title-container p{
+    margin: 29px 0 0 0;
+  }
+  .ip-input-container{
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width:1440px) {
+  .ip-input-container{
+    margin-top: 30px;
   }
 }

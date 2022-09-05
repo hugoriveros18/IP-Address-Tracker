@@ -1,0 +1,139 @@
+.location-general-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 294px;
+    position: absolute;
+    top: 167px;
+    padding: 0 22px;
+    z-index: 2;
+}
+.location-information-container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 26px 0;
+    background-color: #FFFFFF;
+    border-radius: 13px;
+    overflow: hidden;
+}
+.error-location-container {
+    justify-content: center;
+    gap: 20px;
+}
+.information-box{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.information-box p{
+    margin: 0;
+    text-align: center;
+}
+.box-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 11.85px;
+    letter-spacing: 2.2px;
+    color: #A4A4A4;
+}
+.box-description{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 21.33px;
+    letter-spacing: 0.5px;
+    color: #000000;
+}
+.error-icon-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.error-icon-container img {
+    width: 100px;
+    height: 100px;
+}
+.error-text-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.error-text-container p{
+    width: 267px;
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 21.33px;
+    letter-spacing: 0.5px;
+    color: #000000;
+    
+}
+
+@media screen and (min-width:720px) {
+    .location-general-container{
+      padding: 0 85px;
+      height: 350px;
+      top: 190px;
+    }
+    .information-box{
+        gap: 15px;
+    }
+    .box-title{
+        font-size: 1.8rem;
+    }
+    .box-description{
+        font-size: 2.6rem;
+    }
+    .error-text-container p{
+        font-size: 2.6rem;
+        width: 378px;
+        line-height: 28.33px;
+    }
+}
+@media screen and (min-width:1200px) {
+    .location-general-container{
+      padding: 0 85px;
+      height: 161px;
+      top: 165px;
+    }
+    .location-information-container{
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
+    .information-box{
+        padding: 15px 33px;
+        gap: 14px;
+    }
+    .information-box .box-title{
+        font-size: 1.2rem;
+        text-align: start;
+    }
+    .information-box .box-description{
+        font-size: 2.4rem;
+        text-align: start;
+    }
+    .border-right{
+        border-right: solid 1px #D9D9D9;
+    }
+    .error-text-container p{
+        font-size: 2.6rem;
+        width: 465px;
+        line-height: 28.33px;
+        color: rgb(211, 49, 49);
+        font-style: italic;
+    }
+}
+@media screen and (min-width:1440px) {
+    .location-general-container{
+      top: 200px;
+    }
+}
