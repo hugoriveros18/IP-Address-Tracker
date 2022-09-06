@@ -18,7 +18,7 @@ const iconPerson = new L.Icon({
 function LocationMarker({currentCoordinates}) {
 
     const map = useMap();
-    map.flyTo(currentCoordinates, 16, {duration: 3})
+    map.flyTo(currentCoordinates, 14, {duration: 3})
   
     return (
       <Marker position={currentCoordinates} icon={iconPerson}>
