@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/IP-Address-Tracker/static/css/main.d4f6f867.css",
+    "main.css": "/IP-Address-Tracker/static/css/main.c499bd3c.css",
     "main.js": "/IP-Address-Tracker/static/js/main.028ebb76.js",
     "static/js/787.ae94230f.chunk.js": "/IP-Address-Tracker/static/js/787.ae94230f.chunk.js",
     "static/media/pattern-bg.png": "/IP-Address-Tracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
@@ -9,12 +9,12 @@
     "index.html": "/IP-Address-Tracker/index.html",
     "static/media/icon-location.svg": "/IP-Address-Tracker/static/media/icon-location.7e6459d2a9278295ae782e100965be4b.svg",
     "static/media/icon-arrow.svg": "/IP-Address-Tracker/static/media/icon-arrow.2eaaa5ee3602d5aa14a2dba69e9fb7a0.svg",
-    "main.d4f6f867.css.map": "/IP-Address-Tracker/static/css/main.d4f6f867.css.map",
+    "main.c499bd3c.css.map": "/IP-Address-Tracker/static/css/main.c499bd3c.css.map",
     "main.028ebb76.js.map": "/IP-Address-Tracker/static/js/main.028ebb76.js.map",
     "787.ae94230f.chunk.js.map": "/IP-Address-Tracker/static/js/787.ae94230f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4f6f867.css",
+    "static/css/main.c499bd3c.css",
     "static/js/main.028ebb76.js"
   ]
 }
