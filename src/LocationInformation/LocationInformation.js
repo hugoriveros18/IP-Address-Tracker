@@ -8,12 +8,6 @@ function LocationInformation({requestResponse,requetsResponseInformation}) {
     return(
         <div className='location-general-container'>
             <div className={`location-information-container ${(requestResponse === "private range" || requestResponse === "reserved range" || requestResponse === "invalid query") && 'error-location-container'}`}>
-                {(requestResponse === "start" && window.innerWidth < 1200) && 
-                    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_b1imuadj.json"  background="transparent"  speed="2"  style={{width:"450px", height:"450px"}} loop autoplay></lottie-player>
-                }
-                {(requestResponse === "start" && window.innerWidth >= 1200) && 
-                    <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_b1imuadj.json"  background="transparent"  speed="2"  style={{width:"250px", height:"250px"}} loop autoplay></lottie-player>
-                }
                 {requestResponse === "success" &&
                 <>
                     <div className='information-box border-right'>
@@ -34,7 +28,7 @@ function LocationInformation({requestResponse,requetsResponseInformation}) {
                     </div>
                 </> 
                 }
-                {(requestResponse === "private range" || requestResponse === "reserved range") &&
+                {requestResponse === "private range" &&
                 <>
                     {window.innerWidth < 1200 && 
                     <div className='error-icon-container'>

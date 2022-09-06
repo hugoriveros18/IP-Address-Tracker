@@ -3,6 +3,7 @@ import React from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet'
 import { LocationMarker } from './LeafletGeneral/LeafletGeneral';
 import { LocationInformation } from './LocationInformation/LocationInformation';
+import { Modal } from './Modal/Modal';
 import iconArrow from './app-images/icon-arrow.svg';
 
 
@@ -11,9 +12,9 @@ function App() {
   
   //STATES
   const [inputIpAddress,setInputIpAddress] = React.useState("");
-  const [requestResponse,setRequestResponse] = React.useState("start"); //start,success,private range,reserved range,invalid query
-  const [requetsResponseInformation,setRequetsResponseInformation] = React.useState([]);
-  const [currentCoordinates, setCurrentCoordinates] = React.useState([34.0648,-118.086])
+  const [requestResponse,setRequestResponse] = React.useState("success"); //success,private range,reserved range,invalid query
+  const [requetsResponseInformation,setRequetsResponseInformation] = React.useState(["192.212.174.101","Garvey, United States 91770-3713","America/Los Angeles","Southern California Edison"]);
+  const [currentCoordinates, setCurrentCoordinates] = React.useState([34.05430,-118.08212])
   
   //FUNCTIONS
   const setNewIpAddress = (e) => {
@@ -29,7 +30,7 @@ function App() {
           console.log(info.status)
           if(info.message === undefined){
             setRequestResponse("success");
-            setRequetsResponseInformation([info.ip,`${info.district === "" ? info.state_prov : info.district}, ${info.country_name} ${info.zipcode}`,info.time_zone.name,info.isp]);
+            setRequetsResponseInformation([info.ip,`${info.district === "" ? info.state_prov : info.district}, ${info.country_name} ${info.zipcode}`,info.time_zone.name.replace("_"," "),info.isp]);
             setCurrentCoordinates([info.latitude,info.longitude]);
             
           } else {
@@ -75,6 +76,9 @@ function App() {
 
       {/* LOCATION INFORMATION */}
       <LocationInformation requestResponse={requestResponse} requetsResponseInformation={requetsResponseInformation}/>
+
+      {/* MODAL */}
+      <Modal/>
     </>
   );
 }
