@@ -1,5 +1,5 @@
 import React from "react";
-import { Marker, Popup, useMap } from "react-leaflet";
+import { Marker, useMap } from "react-leaflet";
 import locationIcon from '../app-images/icon-location.svg'
 import L from 'leaflet';
 
@@ -21,9 +21,7 @@ function LocationMarker({currentCoordinates}) {
     map.flyTo(currentCoordinates, 14, {duration: 3})
   
     return (
-      <Marker position={currentCoordinates} icon={iconPerson}>
-        <Popup>You are here</Popup>
-      </Marker>
+      <Marker position={currentCoordinates} icon={iconPerson}/>
     )
 }
 

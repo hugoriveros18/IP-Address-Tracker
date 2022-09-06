@@ -21,18 +21,24 @@ function App() {
   }
   const sendRequest = () => {
     if(inputIpAddress !== "") {
-      const API = `http://ip-api.com/json/${inputIpAddress}`;
+      const API = `https://api.ipgeolocation.io/ipgeo?apiKey=f0d22b3cfb464a14a9f3994742a3e2f6&ip=${inputIpAddress}`;
       fetch(API)
         .then(result => result.json())
         .then((info) => {
-          if(info.status === 'success'){
-            setRequestResponse(info.status);
-            setRequetsResponseInformation([info.query,`${info.city}, ${info.region} ${info.zip}`,info.timezone.replace("_"," "),info.isp]);
-            setCurrentCoordinates([info.lat,info.lon]);
+          console.log(info)
+          console.log(info.status)
+          if(info.message === undefined){
+            setRequestResponse("success");
+            setRequetsResponseInformation([info.ip,`${info.district === "" ? info.state_prov : info.district}, ${info.country_name} ${info.zipcode}`,info.time_zone.name,info.isp]);
+            setCurrentCoordinates([info.latitude,info.longitude]);
             
           } else {
-            setRequestResponse(info.message);
-            setRequetsResponseInformation(inputIpAddress)
+            if(info.message === "IP to geolocation lookup for domain or service name is not supported on your free subscription. This feature is available to all paid subscriptions only.") {
+              setRequestResponse("invalid query");
+            } else {
+              setRequestResponse("private range");
+              setRequetsResponseInformation(inputIpAddress)
+            }
           }
         })
     }
