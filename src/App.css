@@ -69,6 +69,7 @@
   width: 100%;
   height: 63.8%;
   z-index: 1;
+  position: absolute;
 }
 .leaflet-div-icon{
   background: inherit;
