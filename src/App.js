@@ -12,9 +12,11 @@ function App() {
   
   //STATES
   const [inputIpAddress,setInputIpAddress] = React.useState("");
-  const [requestResponse,setRequestResponse] = React.useState("success"); //success,private range,reserved range,invalid query
+  const [requestResponse,setRequestResponse] = React.useState(["success",0]); //success,private range,reserved range,invalid query
+  
   const [requetsResponseInformation,setRequetsResponseInformation] = React.useState(["192.212.174.101","Garvey, United States 91770-3713","America/Los Angeles","Southern California Edison"]);
   const [currentCoordinates, setCurrentCoordinates] = React.useState([34.05430,-118.08212])
+
   
   //FUNCTIONS
   const setNewIpAddress = (e) => {
@@ -27,17 +29,18 @@ function App() {
         .then(result => result.json())
         .then((info) => {
           console.log(info)
-          console.log(info.status)
           if(info.message === undefined){
-            setRequestResponse("success");
+            setRequestResponse(["success",requestResponse[1] + 1]);
             setRequetsResponseInformation([info.ip,`${info.district === "" ? info.state_prov : info.district}, ${info.country_name} ${info.zipcode}`,info.time_zone.name.replace("_"," "),info.isp]);
             setCurrentCoordinates([info.latitude,info.longitude]);
             
           } else {
             if(info.message === "IP to geolocation lookup for domain or service name is not supported on your free subscription. This feature is available to all paid subscriptions only.") {
-              setRequestResponse("invalid query");
+              console.log("entre1")
+              setRequestResponse(["invalid query",requestResponse[1] + 1]);
             } else {
-              setRequestResponse("private range");
+              console.log("entre2")
+              setRequestResponse(["private range",requestResponse[1] + 1]);
               setRequetsResponseInformation(inputIpAddress)
             }
           }
@@ -75,7 +78,7 @@ function App() {
       </MapContainer>
 
       {/* LOCATION INFORMATION */}
-      <LocationInformation requestResponse={requestResponse} requetsResponseInformation={requetsResponseInformation}/>
+      <LocationInformation requestResponse={requestResponse} requetsResponseInformation={requetsResponseInformation} />
 
       {/* MODAL */}
       <Modal/>
