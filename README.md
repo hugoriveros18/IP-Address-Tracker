@@ -30,11 +30,15 @@ Users should be able to:
 
 ***Mobile***
 
-<!-- <img src="./public/screen-mobile.png" width="800"/>  -->
+<img src="./src/app-images/mobile-preview.png" width="800"/> 
+
+***Tablet***
+
+<img src="./src/app-images/tablet-preview.png" width="800"/>
 
 ***Desktop***
 
-<!-- <img src="./public/screen-desktop.png" width="800" />  -->
+<img src="./src/app-images/desktop-preview.png" width="800"/>
 
 
 ### Links
