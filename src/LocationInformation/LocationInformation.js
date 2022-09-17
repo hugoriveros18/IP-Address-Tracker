@@ -79,6 +79,11 @@ function LocationInformation({requestResponse,requetsResponseInformation}) {
                     </div>
                 </>
                 }
+                {responseStatus === "initial location" && 
+                    <div className='initial-message-container'>
+                        <p>¡Welcome to IP Address Tracker, the app where you can track any public IP Address in the world!</p>
+                    </div>
+                }
 
 
             </div>

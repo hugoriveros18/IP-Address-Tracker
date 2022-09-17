@@ -78,6 +78,24 @@
     color: #000000;
     
 }
+.initial-message-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.initial-message-container p {
+    margin: 0;
+    width: 280px;
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 0.2px;
+    color: #000000;
+}
 
 @media screen and (min-width:720px) {
     .location-general-container{
@@ -98,6 +116,11 @@
         font-size: 2.6rem;
         width: 378px;
         line-height: 28.33px;
+    }
+    .initial-message-container p {
+        font-size: 3.8rem;
+        width: 500px;
+        line-height: 50px;
     }
 }
 @media screen and (min-width:1200px) {
@@ -133,6 +156,11 @@
         line-height: 28.33px;
         color: rgb(211, 49, 49);
         font-style: italic;
+    }
+    .initial-message-container p {
+        font-size: 2.8rem;
+        width: 700px;
+        line-height: 40px;
     }
 }
 @media screen and (min-width:1440px) {

@@ -15,10 +15,20 @@ const iconPerson = new L.Icon({
     className: 'leaflet-div-icon'
 });
 
-function LocationMarker({currentCoordinates}) {
+
+function LocationMarker({currentCoordinates, setCurrentCoordinates}) {
+
+    const [initialLocation,setInitialLocation] = React.useState(true);
 
     const map = useMap();
-    map.flyTo(currentCoordinates, 14, {duration: 3})
+    if(initialLocation){
+      map.locate().on("locationfound", function(e) {
+        setCurrentCoordinates([e.latlng.lat, e.latlng.lng])
+        setInitialLocation(false)
+      })
+    } else {
+      map.flyTo(currentCoordinates, 14, {duration: 3})
+    } 
   
     return (
       <Marker position={currentCoordinates} icon={iconPerson}/>
