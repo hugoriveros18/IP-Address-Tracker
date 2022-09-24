@@ -64,6 +64,7 @@
 .leaflet-container {
   height: 65%;
   z-index: 1;
+  overflow: hidden;
 }
 .leaflet-div-icon{
   background: inherit;
