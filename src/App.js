@@ -3,7 +3,6 @@ import React from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet'
 import { LocationMarker } from './LeafletGeneral/LeafletGeneral';
 import { LocationInformation } from './LocationInformation/LocationInformation';
-import { Modal } from './Modal/Modal';
 import iconArrow from './app-images/icon-arrow.svg';
 
 
@@ -77,9 +76,6 @@ function App() {
 
       {/* LOCATION INFORMATION */}
       <LocationInformation requestResponse={requestResponse} requetsResponseInformation={requetsResponseInformation} />
-
-      {/* MODAL */}
-      <Modal/>
     </>
   );
 }
