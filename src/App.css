@@ -103,17 +103,24 @@
 }
 @media screen and (min-width:1200px) {
   .header-container{
-    height: 36.2%;
+    height: 30%;
     padding: 0 442px;
   }
   .header-title-container p{
-    margin: 29px 0 0 0;
+    margin: 10px 0 0 0;
   }
   .ip-input-container{
     margin-top: 15px;
+    height: 45px;
+  }
+  .ip-input-container input{
+    font-size: 1.8rem;
+  }
+  .ip-input-container input::placeholder{
+    font-size: 1.8rem;
   }
   .leaflet-container {
-    height: 63.8%;
+    height: 70%;
   }
 }
 @media screen and (min-width:1440px) {

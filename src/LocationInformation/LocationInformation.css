@@ -126,8 +126,8 @@
 @media screen and (min-width:1200px) {
     .location-general-container{
       padding: 0 85px;
-      height: 161px;
-      top: 165px;
+      height: 130px;
+      top: 130px;
     }
     .location-information-container{
         flex-direction: row;
